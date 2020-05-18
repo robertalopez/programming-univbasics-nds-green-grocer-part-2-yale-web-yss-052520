@@ -1,4 +1,5 @@
 require_relative './part_1_solution.rb'
+require pry 
 
 def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
@@ -17,6 +18,7 @@ def apply_coupons(cart, coupons)
         end 
         else cart << {:item => "#{name} W/COUPON", :price => (coupon[:cost] / coupon[:num]), :clearance => find_item_by_name_in_collection(name, cart)[:clearance],
           :count => 1} 
+          binding.pry 
         
 end
 find_item_by_name_in_collection(name, cart)[:count] -= coupon[:num] 
