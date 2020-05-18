@@ -15,7 +15,7 @@ def apply_coupons(cart, coupons)
         end 
           index2 += 1
         end 
-        else cart << {:item => "#{name} W/COUPON", :price => coupon[:cost] / coupon[:num], :clearance => cart[index][:clearance],
+        else cart << {:item => "#{name} W/COUPON", :price => coupon[:cost] / coupon[:num], :clearance => find_item_by_name_in_collection(name, cart)[:clearance],
           :count => 1} 
         
 end
