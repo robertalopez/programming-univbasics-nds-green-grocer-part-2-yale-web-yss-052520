@@ -19,7 +19,7 @@ def apply_coupons(cart, coupons)
           :count => 1} 
         
 end
-cart[index][:count] -= coupon[:num] 
+find_item_by_name_in_collection(name, cart)[:count] -= coupon[:num] 
         
 end
 end 
