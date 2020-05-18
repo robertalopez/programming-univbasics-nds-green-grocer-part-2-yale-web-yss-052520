@@ -7,7 +7,6 @@ def apply_coupons(cart, coupons)
   # REMEMBER: This method **should** update cart
   coupons.each do |coupon|
     coupon.each do |attribute, value|
-      binding.pry 
       name = coupon[:item]
       if find_item_by_name_in_collection(name, cart) && find_item_by_name_in_collection(name, cart)[:count] >= coupon[:num] 
         index2 = 0 
