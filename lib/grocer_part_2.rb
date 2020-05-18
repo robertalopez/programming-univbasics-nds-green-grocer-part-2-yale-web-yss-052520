@@ -7,7 +7,7 @@ def apply_coupons(cart, coupons)
   coupons.each do |coupon|
     coupon.each do |attribute, value|
       name = coupon[:item]
-      if find_item_by_name_in_collection(name, cart) && find_item_by_name_in_collection[:count] >= coupon[:num] 
+      if find_item_by_name_in_collection(name, cart) && find_item_by_name_in_collection(name, cart)[:count] >= coupon[:num] 
         index2 = 0 
         while index2 < cart.length 
         if cart[index2][:item] == "#{name} W/COUPON"
